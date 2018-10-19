@@ -14,19 +14,19 @@ class Recipe < ApplicationRecord
     created_at.strftime("%m/%d/%Y")
   end 
 
-  def friendly_prep_time
-    hours = prep_time / 60
-    minutes = prep_time % 60
-    time_message = ""
+  # def friendly_prep_time
+  #   hours = prep_time / 60
+  #   minutes = prep_time % 60
+  #   time_message = ""
 
     
-    time_message +=  "#{hours} #{ 'Hour'.pluralize(hours) }" if hours > 0
-    time_message += ", " if hours > 0 && minutes > 0
-    time_message +=  "#{minutes} #{ 'Minutes'.pluralize(minutes)}" if minutes > 0
+  #   time_message +=  "#{hours} #{ 'Hour'.pluralize(hours) }" if hours > 0
+  #   time_message += ", " if hours > 0 && minutes > 0
+  #   time_message +=  "#{minutes} #{ 'Minutes'.pluralize(minutes)}" if minutes > 0
    
 
-    time_message
-  end
+  #   time_message
+  # end
 
   def chef
     user && user.name
